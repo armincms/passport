@@ -1,0 +1,31 @@
+{
+    "name": "armincms/passport",
+    "description": "A Laravel Nova tool.",
+    "keywords": [
+        "laravel",
+        "nova"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=7.1.0", 
+        "laravel/passport" : "8.*",
+        "armincms/qasedak": "~0.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Component\\LaravelPassport\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Component\\LaravelPassport\\LaravelPassportServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
