@@ -223,7 +223,7 @@ class AuthController extends Controller
 
     protected function username()
     {
-        return 'mobile';
+        return 'username';
     }
 
     protected function retriveByCredentional($mobile)
