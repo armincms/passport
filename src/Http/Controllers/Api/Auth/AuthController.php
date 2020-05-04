@@ -352,9 +352,9 @@ class AuthController extends Controller
     protected function makeVerification($user)
     {
         return tap($this->verifyCode(), function($verifyCode) use ($user) {
-            $user->verification()->firstOrCreate([
+            $user->verification()->updateOrCreate([
                 'credentials' => $user->mobile
-            ])->update([
+            ],['token' =>  bcrypt($verifyCode)])->update([
                 'token' =>  bcrypt($verifyCode)
             ]);  
 
